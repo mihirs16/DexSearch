@@ -15,7 +15,7 @@ function searchFunction() {
         redirect: 'follow'
         };
 
-        fetch("http://localhost:5000/search", requestOptions)
+        fetch("https://dexsearch.azurewebsites.net/search", requestOptions)
         .then(response => response.json())
         .then((result) => {
             // console.log(result);
