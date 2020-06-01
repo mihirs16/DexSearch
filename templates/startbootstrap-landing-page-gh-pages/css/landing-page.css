@@ -1,0 +1,63 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  padding: 10px;
+  font-size: xx-large;
+  height: 75px;
+}
+
+header.masthead {
+  position: relative;
+  background-image: url('../img/masthead_backgrnd.webp');
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 19.75rem;
+    height: auto;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .alt-one {
+  background-color: lightblue;
+}
+
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 5rem;
+  }
+}
+
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
