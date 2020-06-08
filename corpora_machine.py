@@ -1,3 +1,4 @@
+# importing modules for use
 import pandas as pd
 import re
 
@@ -7,11 +8,13 @@ from nltk.stem import WordNetLemmatizer
 nltk.download('stopwords')
 nltk.download('wordnet')
 
+# function to remove stop words
 def remove_stopwords(text):
   stop_words = set(stopwords.words('english'))
   no_stopword_text = [w for w in text.split() if not w in stop_words]
   return ' '.join(no_stopword_text)
 
+# function with all steps of text cleaning
 lemmatizer = WordNetLemmatizer()
 def clean_text (text):
   text = re.sub("\'", "", text) 
@@ -23,10 +26,13 @@ def clean_text (text):
       _t += lemmatizer.lemmatize(t, pos='n') + " "
   return remove_stopwords(_t)
 
+# function to clean any given text
 def get_keywords (text):
   cleaned_text = clean_text(text)
   return cleaned_text.split()
 
+# function to build a corpora after pre-processing
+# to be used by the search engine
 def build_corpora_from_excel(_path):
     df = pd.read_excel(_path)
     df.dropna(axis=0, inplace=True)
